@@ -5,31 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mamma Mia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+SA+Beginner:wght@500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <h1>Mamma Mia</h1>
 
-    <div>
+    <header id="header">
+        <div id="logo">
+            <img src="./img/logo.jpg" alt="">
+        </div>
+        <div id="encabezado">
+            <h1>Madonna Santa</h1>
+        </div>
+    </header>
+
+    <div id="nav">
         <h2>
             Nuestros productos
         </h2>
     </div>
-    <div id="productos">
-        <div id="container-productos">
-    
-        </div>
-    </div>
-
-    <div>
-        <h2>
-            Carrito de compras
-        </h2>
-    </div>
     <div id="carrito-de-compras">
-        <div id="container-carrito">
-
+        <img id= "imagen-carrito" src="./img/carrito.png" alt="carrito">
+        <div id="canasta">    
+        
+        </div>
+        <div id="total-carrito">
+            
+        </div>
+        <div id="boton-ocultar">
+            <button>
+                Ocultar carrito
+            </button>
         </div>
     </div>
+
+    <div id="listado-productos">
+        <div class="productos-cuarto">
+            <h3>
+                Productos (1/4)
+            </h3>
+        </div>
+        <div class="productos-medio">
+            <h3>
+                Productos (1/2)
+            </h3>
+        </div>
+        <div class="productos-bizcochuelos">
+            <h3>
+                Bizcochuelos
+            </h3>
+        </div>
+    </div>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="script.js"></script>
 </body>
 </html>

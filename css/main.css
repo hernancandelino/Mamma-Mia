@@ -1,0 +1,143 @@
+body {
+  margin: 0%;
+  padding: 0%;
+  background-color: #DFEDFC;
+}
+
+h3 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 25px;
+  margin: 50px 15px;
+}
+
+#header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: linear-gradient(135deg, #30373f 50%, #445262 75%);
+  width: 100%;
+}
+
+#header #logo {
+  width: 15%;
+}
+
+#header #logo img {
+  width: 100%;
+}
+
+#header #encabezado h1 {
+  font-family: 'Bebas Neue', cursive;
+  color: #ffffff;
+  font-size: 70px;
+}
+
+#nav {
+  display: inline-block;
+}
+
+#nav h2 {
+  font-size: 40px;
+  margin: 50px;
+  font-family: 'Bebas Neue', cursive;
+}
+
+#carrito-de-compras {
+  display: inline-block;
+  margin: 10px 0 0 70%;
+  width: 5%;
+  position: absolute;
+  top: 300px;
+}
+
+#carrito-de-compras :hover {
+  cursor: pointer;
+}
+
+#carrito-de-compras img {
+  width: 100%;
+}
+
+#carrito-de-compras #canasta {
+  display: none;
+}
+
+#carrito-de-compras #canasta .producto-canasta img {
+  width: 100%;
+}
+
+#carrito-de-compras #canasta .producto-canasta .descripcion-producto p {
+  font-family: 'Edu SA Beginner', cursive;
+  font-size: 20px;
+  color: #30373f;
+}
+
+#carrito-de-compras #boton-ocultar {
+  display: none;
+}
+
+#listado-productos .producto {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+}
+
+#listado-productos .producto :hover {
+  cursor: pointer;
+}
+
+#listado-productos .producto div {
+  border: #30373f groove 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px auto;
+  background-color: #30373f;
+}
+
+#listado-productos .producto div .imagen-producto {
+  border: none;
+  display: block;
+  margin: 10px 0;
+  width: 17%;
+}
+
+#listado-productos .producto div .imagen-producto img {
+  width: 100%;
+}
+
+#listado-productos .producto div .contenido-producto {
+  border: none;
+  width: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0;
+}
+
+#listado-productos .producto div .contenido-producto p {
+  font-family: 'Edu SA Beginner', cursive;
+  font-size: 20px;
+  color: #ffffff;
+}
+/*# sourceMappingURL=main.css.map */
