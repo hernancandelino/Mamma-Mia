@@ -97,7 +97,6 @@ const insertarCanastaTortas = (producto) => {
 const clickProductoTortas = (producto) => {
   insertarCanastaTortas(producto);
   canasta.push(producto);
-  console.log(canasta)
   const precioCarrito = canasta.reduce((acc, el) => acc + el.precio, 0);
   totalCarrito.innerHTML = `TOTAL $${precioCarrito}`
 }
@@ -115,7 +114,6 @@ const clickCanasta = (contenedor, producto) => {
       Swal.fire('Producto eliminado');
       contenedor.remove();
       canasta.splice(canasta.indexOf(producto), 1)
-      console.log(canasta)
       const precioCarrito = canasta.reduce((acc, el) => acc + el.precio, 0);
       totalCarrito.innerHTML = `TOTAL $${precioCarrito}`
     } else if (result.isDenied) {
