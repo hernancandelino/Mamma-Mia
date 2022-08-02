@@ -39,21 +39,21 @@ h3 {
 }
 #carrito-de-compras {
     display: inline-block;
-    margin: 10px 0 0 70%;
-    width: 5%;
+    margin: 10px 0 0 60%;
+    width: 15%;
     position: absolute;
     top: 300px;
     :hover {
         cursor: pointer;
     }
     img {
-        width: 100%;
+        width: 33%;
     }
     #canasta {
         display: none;
         .producto-canasta {
             img {
-                width: 100%;
+                width: 66%;
             }
             .descripcion-producto {
                 p {
@@ -64,9 +64,24 @@ h3 {
             }
         }
     }
-    #boton-ocultar {
+    #total-carrito {
         display: none;
-        button {
+        :hover {
+            cursor: default;
+        }
+    }
+    #botones {
+        display: flex;
+        justify-content: space-between;
+        #boton-compra {
+            display: none;
+            button {
+            }
+        }
+        #boton-ocultar {
+            display: none;
+            button {
+            }
         }
     }
 }

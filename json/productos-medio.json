@@ -1,0 +1,5 @@
+[
+    {"nombre": "Struffules", "precio": 600, "id": 1, "imagen": "./img/struffules.jpg"},
+    {"nombre": "Tarales", "precio": 600, "id": 2, "imagen": "./img/tarales.jpg"},
+    {"nombre": "Bizcochos", "precio": 600, "id": 2, "imagen": "./img/bizcochos.jpg"}
+]
