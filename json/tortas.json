@@ -1,8 +1,8 @@
 [
-    {"sabor": "Manzana", "precio": 600, "id": 4, "imagen": "./img/bizcochuelo-manzana.jpg"},
-    {"sabor": "Banana", "precio": 600, "id": 5, "imagen": "./img/bizcochuelo-banana.jpg"},
-    {"sabor": "Limon", "precio": 600, "id": 6, "imagen": "./img/bizcochuelo-limon.jpg"},
-    {"sabor": "Naranja", "precio": 600, "id": 7, "imagen": "./img/bizcochuelo-limon.jpg"},
-    {"sabor": "Vainilla", "precio": 600, "id": 8, "imagen": "./img/bizcochuelo-vainilla.jpg"},
-    {"sabor": "Chocolate", "precio": 600, "id": 9, "imagen": "./img/bizcochuelo-chocolate.jfif"}
+    {"nombre": "Manzana", "tamaño": "GRANDE", "precio": 600, "id": 7, "imagen": "./img/bizcochuelo-manzana.jpg"},
+    {"nombre": "Banana", "tamaño": "GRANDE", "precio": 600, "id": 8, "imagen": "./img/bizcochuelo-banana.jpg"},
+    {"nombre": "Limon", "tamaño": "GRANDE", "precio": 600, "id": 9, "imagen": "./img/bizcochuelo-limon.jpg"},
+    {"nombre": "Naranja", "tamaño": "GRANDE", "precio": 600, "id": 10, "imagen": "./img/bizcochuelo-limon.jpg"},
+    {"nombre": "Vainilla", "tamaño": "GRANDE", "precio": 600, "id": 11, "imagen": "./img/bizcochuelo-vainilla.jpg"},
+    {"nombre": "Chocolate", "tamaño": "GRANDE", "precio": 600, "id": 12, "imagen": "./img/bizcochuelo-chocolate.jfif"}
 ]

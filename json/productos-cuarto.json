@@ -1,5 +1,5 @@
 [
-    {"nombre": "Struffules", "precio": 350, "id": 1, "imagen": "./img/struffules.jpg"},
-    {"nombre": "Tarales", "precio": 350, "id": 2, "imagen": "./img/tarales.jpg"},
-    {"nombre": "Bizcochos", "precio": 350, "id": 2, "imagen": "./img/bizcochos.jpg"}
+    {"nombre": "Struffules", "tamaño": "1/4 KG", "precio": 350, "id": 1, "imagen": "./img/struffules.jpg"},
+    {"nombre": "Tarales", "tamaño": "1/4 KG", "precio": 350, "id": 2, "imagen": "./img/tarales.jpg"},
+    {"nombre": "Bizcochos", "tamaño": "1/4 KG", "precio": 350, "id": 3, "imagen": "./img/bizcochos.jpg"}
 ]

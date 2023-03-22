@@ -13,7 +13,7 @@ const productosMedio = document.querySelector(".productos-medio");
 const productosBizcochuelos = document.querySelector(".productos-bizcochuelos");
 //CLICK BOTONES
 carrito.onclick = () => {
-  contenedorCanasta.style = 'display:block'
+  contenedorCanasta.style = 'display:block; overflow-y: scroll; max-height: 450px'
   botonOcultar.style = 'display:block'
   totalCarrito.style = 'display:block'
   botonCompra.style = 'display:block'
@@ -46,61 +46,24 @@ botonCompra.onclick = () => {
     }
   })
 }
-//FUNCIONES CUARTO
-const clickProductoCuarto = (producto) => {
-  insertarCanastaComidasItalianasCuarto(producto);
-  canasta.push(producto);
-  const precioCarrito = canasta.reduce((acc, el) => acc + el.precio, 0);
-  totalCarrito.innerHTML = `TOTAL $${precioCarrito}`
-}
-const insertarCanastaComidasItalianasCuarto = (producto) => {
-  const contenedor = document.createElement('div');
-  contenedor.classList = 'producto-canasta';
-  contenedor.innerHTML = `<img src="${producto.imagen}">
-  <div class="descripcion-producto">
-    <p>${producto.nombre.toUpperCase()}</p>
-    <p>1/4 KG $${producto.precio}</p>
-  </div>`;
-  contenedor.onclick = () => {clickCanasta(contenedor, producto)};
-  contenedorCanasta.append(contenedor);
-}
-//FUNCIONES MEDIO
-const insertarCanastaComidasItalianasMedio = (producto) => {
-  const contenedor = document.createElement('div');
-  contenedor.classList = 'producto-canasta';
-  contenedor.innerHTML = `<img src="${producto.imagen}">
-  <div class="descripcion-producto">
-    <p>${producto.nombre.toUpperCase()}</p>
-    <p>1/2 KG $${producto.precio}</p>
-  </div>`;
-  contenedor.onclick = () => {clickCanasta(contenedor, producto)};
-  contenedorCanasta.append(contenedor);
-}
-const clickProductoMedio = (producto) => {
-  insertarCanastaComidasItalianasMedio(producto);
-  canasta.push(producto);
-  const precioCarrito = canasta.reduce((acc, el) => acc + el.precio, 0);
-  totalCarrito.innerHTML = `TOTAL $${precioCarrito}`
-}
-//FUNCIONES TORTAS
-const insertarCanastaTortas = (producto) => {
-  const contenedor = document.createElement('div');
-  contenedor.classList = 'producto-canasta';
-  contenedor.innerHTML = `<img src="${producto.imagen}">
-  <div class="descripcion-producto">
-    <p>${producto.sabor.toUpperCase()}</p>
-    <p>$${producto.precio}</p>
-  </div>`;
-  contenedor.onclick = () => {clickCanasta(contenedor, producto)};
-  contenedorCanasta.append(contenedor);
-}
-const clickProductoTortas = (producto) => {
-  insertarCanastaTortas(producto);
-  canasta.push(producto);
-  const precioCarrito = canasta.reduce((acc, el) => acc + el.precio, 0);
-  totalCarrito.innerHTML = `TOTAL $${precioCarrito}`
-}
 //FUNCIONES
+const insertarCanasta = (producto) => {
+  const contenedor = document.createElement('div');
+  contenedor.classList = 'producto-canasta';
+  contenedor.innerHTML = `<img src="${producto.imagen}">
+  <div class="descripcion-producto">
+    <p>${producto.nombre.toUpperCase()}</p>
+    <p>${producto.tamaño} $${producto.precio}</p>
+  </div>`;
+  contenedor.onclick = () => {clickCanasta(contenedor, producto)};
+  contenedorCanasta.append(contenedor);
+}
+const clickProducto = (producto) => {
+  insertarCanasta(producto);
+  canasta.push(producto);
+  const precioCarrito = canasta.reduce((acc, el) => acc + el.precio, 0);
+  totalCarrito.innerHTML = `TOTAL $${precioCarrito}`
+}
 const clickCanasta = (contenedor, producto) => {
   Swal.fire({
     title: 'Desea eliminar el producto?',
@@ -135,11 +98,11 @@ const insertarProductosCuarto = () => {
         </div>
         <div class="contenido-producto">
           <p>${producto.nombre.toUpperCase()}</p>
-          <p>1/4 KG $${producto.precio}</p>
+          <p>${producto.tamaño} $${producto.precio}</p>
         </div>
       </div>`;
       productosCuarto.appendChild(contenidoProductoCuarto);
-      contenidoProductoCuarto.onclick = () => {clickProductoCuarto(producto)}
+      contenidoProductoCuarto.onclick = () => {clickProducto(producto)}
     })
   })
 }
@@ -157,11 +120,11 @@ const insertarProductosMedio = () => {
       </div>
         <div class="contenido-producto">
           <p>${producto.nombre.toUpperCase()}</p>
-          <p>1/2 KG $${producto.precio}</p>
+          <p>${producto.tamaño} $${producto.precio}</p>
         </div>
       </div>`;
       productosMedio.appendChild(contenidoProductoMedio);
-      contenidoProductoMedio.onclick = () => {clickProductoMedio(producto)}
+      contenidoProductoMedio.onclick = () => {clickProducto(producto)}
     })
   })
 }
@@ -178,15 +141,21 @@ const insertarProductosTortas = () => {
       <img src="${producto.imagen}" alt="${producto.nombre}">
       </div>
         <div class="contenido-producto">
-          <p>${producto.sabor.toUpperCase()}</p>
-          <p>$${producto.precio}</p>
+          <p>${producto.nombre.toUpperCase()}</p>
+          <p>${producto.tamaño} $${producto.precio}</p>
         </div>
       </div>`;
       productosBizcochuelos.appendChild(contenidoProductoTortas);
-      contenidoProductoTortas.onclick = () => {clickProductoTortas(producto)}
+      contenidoProductoTortas.onclick = () => {clickProducto(producto)}
     })
   })
 }
 insertarProductosCuarto();
 insertarProductosMedio();
 insertarProductosTortas();
+//MEDIA QUERY
+if (window.matchMedia("(min-width: 481px) and (max-width: 768px)").matches) {
+  
+} else if (window.matchMedia("(max-width: 480px)").matches) {
+
+}
