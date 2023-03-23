@@ -1,6 +1,7 @@
 //CANASTA
 const canasta = [];
-const precioTotalCarrito = 0
+const precioTotalCarrito = 0;
+const canastaLocalStorage = JSON.parse(localStorage.getItem('canasta'));
 //DOM
 const totalCarrito = document.getElementById("total-carrito")
 const botonOcultar = document.getElementById("boton-ocultar");
@@ -38,7 +39,7 @@ botonCompra.onclick = () => {
     denyButtonText: `No`,
   }).then((result) => {
     /* Read more about isConfirmed, isDenied below */
-    if (result.isConfirmed) {
+    if (result.isConfirmed && canasta.length >= 1) {
       Swal.fire('¡Su compra ha sido realizada con éxito!');
       canasta.splice(0, canasta.length)
       const precioCarrito = canasta.reduce((acc, el) => acc + el.precio, 0);
@@ -48,6 +49,8 @@ botonCompra.onclick = () => {
       }
     } else if (result.isDenied) {
       Swal.fire('Compra no realizada')
+    } else if (result.isConfirmed && canasta.length < 1) {
+      Swal.fire('Su carrito de compras se encuentra vacío');
     }
   })
 }
@@ -68,6 +71,7 @@ const clickProducto = (producto) => {
   canasta.push(producto);
   const precioCarrito = canasta.reduce((acc, el) => acc + el.precio, 0);
   totalCarrito.innerHTML = `TOTAL $${precioCarrito}`
+  localStorage.setItem('canasta', JSON.stringify(canasta))
 }
 const clickCanasta = (contenedor, producto) => {
   Swal.fire({
@@ -84,6 +88,7 @@ const clickCanasta = (contenedor, producto) => {
       canasta.splice(canasta.indexOf(producto), 1)
       const precioCarrito = canasta.reduce((acc, el) => acc + el.precio, 0);
       totalCarrito.innerHTML = `TOTAL $${precioCarrito}`
+      localStorage.setItem('canasta', JSON.stringify(canasta))
     } else if (result.isDenied) {
       Swal.fire('Producto no eliminado')
     }
@@ -155,12 +160,18 @@ const insertarProductosTortas = () => {
     })
   })
 }
+const comprobarLocalStorage = () => {
+  if (canastaLocalStorage != null) {
+    for (const producto of canastaLocalStorage) {
+      canasta.push(producto)
+    }
+    for (const producto of canasta) {
+      insertarCanasta(producto)
+    }
+  }
+}
+comprobarLocalStorage();
 insertarProductosCuarto();
 insertarProductosMedio();
 insertarProductosTortas();
 //MEDIA QUERY
-if (window.matchMedia("(min-width: 481px) and (max-width: 768px)").matches) {
-
-} else if (window.matchMedia("(max-width: 480px)").matches) {
-
-}
