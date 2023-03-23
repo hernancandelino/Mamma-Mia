@@ -52,55 +52,57 @@ h3 {
         img {
             width: 25%;
         }
-        #canasta {
-            display: none;
-            .producto-canasta {
-                img {
-                    width: 50%;
-                }
-                .descripcion-producto {
-                    p {
-                        font-family: 'Edu SA Beginner', cursive;
-                        font-size: 20px;
-                        color: #30373f; 
+        .div-canasta {
+            #canasta {
+                display: none;
+                .producto-canasta {
+                    img {
+                        width: 50%;
+                    }
+                    .descripcion-producto {
+                        p {
+                            font-family: 'Edu SA Beginner', cursive;
+                            font-size: 20px;
+                            color: #30373f; 
+                        }
                     }
                 }
             }
-        }
-        #total-carrito {
-            display: none;
-            font-family: 'Bebas Neue', cursive;
-            font-size: 25px;
-            :hover {
-                cursor: default;
-            }
-        }
-        #botones {
-            display: flex;
-            justify-content: space-between;
-            margin: 25px 0;
-            #boton-compra {
+            #total-carrito {
                 display: none;
-                width: 50%;
-                button {
-                    padding: 5px;
-                    background-color: #445262;
-                    font-family: 'Bebas Neue', cursive;
-                    color: #ffffff;
-                    font-size: 15px;
-                    border: #30373f double 3px;
+                font-family: 'Bebas Neue', cursive;
+                font-size: 25px;
+                :hover {
+                    cursor: default;
                 }
             }
-            #boton-ocultar {
-                display: none;
-                width: 50%;
-                button {
-                    padding: 5px;
-                    background-color: #445262;
-                    font-family: 'Bebas Neue', cursive;
-                    font-size: 15px;
-                    color: #ffffff;
-                    border: #30373f double 3px;
+            #botones {
+                display: flex;
+                justify-content: space-between;
+                margin: 25px 0;
+                #boton-compra {
+                    display: none;
+                    width: 50%;
+                    button {
+                        padding: 5px;
+                        background-color: #445262;
+                        font-family: 'Bebas Neue', cursive;
+                        color: #ffffff;
+                        font-size: 15px;
+                        border: #30373f double 3px;
+                    }
+                }
+                #boton-ocultar {
+                    display: none;
+                    width: 50%;
+                    button {
+                        padding: 5px;
+                        background-color: #445262;
+                        font-family: 'Bebas Neue', cursive;
+                        font-size: 15px;
+                        color: #ffffff;
+                        border: #30373f double 3px;
+                    }
                 }
             }
         }
@@ -175,33 +177,35 @@ h3 {
             img {
                 width: 33%;
             }
-            #canasta {
-                .producto-canasta {
-                    img {
-                        width: 50%;
-                    }
-                    .descripcion-producto {
-                        p {
-                            font-size: 17px;
+            .div-canasta {
+                #canasta {
+                    .producto-canasta {
+                        img {
+                            width: 50%;
+                        }
+                        .descripcion-producto {
+                            p {
+                                font-size: 17px;
+                            }
                         }
                     }
                 }
-            }
-            #total-carrito {
-                font-size: 22px;
-            }
-            #botones {
-                margin: 22px 0;
-                #boton-compra {
-                    button {
-                        padding: 3px;
-                        font-size: 14px;
-                    }
+                #total-carrito {
+                    font-size: 22px;
                 }
-                #boton-ocultar {
-                    button {
-                        padding: 3px;
-                        font-size: 14px;
+                #botones {
+                    margin: 22px 0;
+                    #boton-compra {
+                        button {
+                            padding: 3px;
+                            font-size: 14px;
+                        }
+                    }
+                    #boton-ocultar {
+                        button {
+                            padding: 3px;
+                            font-size: 14px;
+                        }
                     }
                 }
             }
@@ -247,40 +251,56 @@ h3 {
     }
     #carrito-de-compras {
         .div-carrito {
-            right: -60px;
+            right: 0px;
+            width: 15%;
             img {
-                width: 45%;
+                width: 100%;
             }
-            #canasta {
-                .producto-canasta {
-                    img {
-                        width: 66%;
-                    }
-                    .descripcion-producto {
-                        p {
-                            font-size: 15px;
+            .div-canasta {
+                position: absolute;
+                left: -200px;
+                padding: 15px;
+                display: none;
+                box-shadow: 0 0 0 100vmax hsl(198, 11%, 35%, 0.90);
+                z-index: 2;
+                background-color: #30373f;
+                #canasta {
+                    .producto-canasta {
+                        margin: 0 15px;
+                        img {
+                            width: 66%;
+                        }
+                        .descripcion-producto {
+                            p {
+                                font-size: 15px;
+                                color: #DFEDFC;
+                            }
                         }
                     }
                 }
-            }
-            #total-carrito {
-                font-size: 20px;
-            }
-            #botones {
-                margin: 19px 0;
-                width: 100%;
-                #boton-compra {
-                    width: 50%;
-                    button {
-                        padding: 0;
-                        font-size: 13px;
-                    }
+                #total-carrito {
+                    margin: 10px 0;
+                    font-size: 20px;
+                    color: #DFEDFC;
                 }
-                #boton-ocultar {
-                    width: 50%;
-                    button {
-                        padding: 0;
-                        font-size: 13px;
+                #botones {
+                    margin: 25px 0px;
+                    width: 100%;
+                    #boton-compra {
+                        margin: 0 5px;
+                        width: 50%;
+                        button {
+                            padding: 5px;
+                            font-size: 15px;
+                        }
+                    }
+                    #boton-ocultar {
+                        width: 50%;
+                        margin: 0 5px;
+                        button {
+                            padding: 5px;
+                            font-size: 15px;
+                        }
                     }
                 }
             }
@@ -297,6 +317,103 @@ h3 {
                     .contenido-producto {
                         p {
                             font-size: 17px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    h3 {
+        margin: 20px 10px;
+    }
+    #header {
+        #logo {
+            width: 25%;
+        }
+        #encabezado {
+            width: 66%;
+            text-align: center;
+            h1 {
+                font-size: 35px;
+            }
+        }
+    }
+    #productos__header {
+        h2 {
+            margin: 20px;    
+            font-size: 35px;
+        }
+    }
+    #carrito-de-compras {
+        .div-carrito {
+            right: 0px;
+            width: 15%;
+            img {
+                width: 100%;
+            }
+            .div-canasta {
+                position: absolute;
+                left: -200px;
+                padding: 15px;
+                display: none;
+                box-shadow: 0 0 0 100vmax hsl(198, 11%, 35%, 0.90);
+                z-index: 2;
+                background-color: #30373f;
+                #canasta {
+                    .producto-canasta {
+                        margin: 0 15px;
+                        img {
+                            width: 66%;
+                        }
+                        .descripcion-producto {
+                            p {
+                                font-size: 14px;
+                                color: #DFEDFC;
+                            }
+                        }
+                    }
+                }
+                #total-carrito {
+                    margin: 10px 0;
+                    font-size: 18px;
+                    color: #DFEDFC;
+                }
+                #botones {
+                    margin: 25px 0px;
+                    width: 100%;
+                    #boton-compra {
+                        margin: 0 5px;
+                        width: 50%;
+                        button {
+                            padding: 7px;
+                            font-size: 15px;
+                        }
+                    }
+                    #boton-ocultar {
+                        width: 50%;
+                        margin: 0 5px;
+                        button {
+                            padding: 7px;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #listado-productos {
+        div {
+            .producto {
+                width: 80%;
+                div {
+                    .imagen-producto {
+                        width: 40%;
+                    }
+                    .contenido-producto {
+                        p {
+                            font-size: 15px;
                         }
                     }
                 }

@@ -55,35 +55,35 @@ h3 {
 #carrito-de-compras .div-carrito img {
   width: 25%;
 }
-#carrito-de-compras .div-carrito #canasta {
+#carrito-de-compras .div-carrito .div-canasta #canasta {
   display: none;
 }
-#carrito-de-compras .div-carrito #canasta .producto-canasta img {
+#carrito-de-compras .div-carrito .div-canasta #canasta .producto-canasta img {
   width: 50%;
 }
-#carrito-de-compras .div-carrito #canasta .producto-canasta .descripcion-producto p {
+#carrito-de-compras .div-carrito .div-canasta #canasta .producto-canasta .descripcion-producto p {
   font-family: "Edu SA Beginner", cursive;
   font-size: 20px;
   color: #30373f;
 }
-#carrito-de-compras .div-carrito #total-carrito {
+#carrito-de-compras .div-carrito .div-canasta #total-carrito {
   display: none;
   font-family: "Bebas Neue", cursive;
   font-size: 25px;
 }
-#carrito-de-compras .div-carrito #total-carrito :hover {
+#carrito-de-compras .div-carrito .div-canasta #total-carrito :hover {
   cursor: default;
 }
-#carrito-de-compras .div-carrito #botones {
+#carrito-de-compras .div-carrito .div-canasta #botones {
   display: flex;
   justify-content: space-between;
   margin: 25px 0;
 }
-#carrito-de-compras .div-carrito #botones #boton-compra {
+#carrito-de-compras .div-carrito .div-canasta #botones #boton-compra {
   display: none;
   width: 50%;
 }
-#carrito-de-compras .div-carrito #botones #boton-compra button {
+#carrito-de-compras .div-carrito .div-canasta #botones #boton-compra button {
   padding: 5px;
   background-color: #445262;
   font-family: "Bebas Neue", cursive;
@@ -91,11 +91,11 @@ h3 {
   font-size: 15px;
   border: #30373f double 3px;
 }
-#carrito-de-compras .div-carrito #botones #boton-ocultar {
+#carrito-de-compras .div-carrito .div-canasta #botones #boton-ocultar {
   display: none;
   width: 50%;
 }
-#carrito-de-compras .div-carrito #botones #boton-ocultar button {
+#carrito-de-compras .div-carrito .div-canasta #botones #boton-ocultar button {
   padding: 5px;
   background-color: #445262;
   font-family: "Bebas Neue", cursive;
@@ -164,23 +164,23 @@ h3 {
   #carrito-de-compras .div-carrito img {
     width: 33%;
   }
-  #carrito-de-compras .div-carrito #canasta .producto-canasta img {
+  #carrito-de-compras .div-carrito .div-canasta #canasta .producto-canasta img {
     width: 50%;
   }
-  #carrito-de-compras .div-carrito #canasta .producto-canasta .descripcion-producto p {
+  #carrito-de-compras .div-carrito .div-canasta #canasta .producto-canasta .descripcion-producto p {
     font-size: 17px;
   }
-  #carrito-de-compras .div-carrito #total-carrito {
+  #carrito-de-compras .div-carrito .div-canasta #total-carrito {
     font-size: 22px;
   }
-  #carrito-de-compras .div-carrito #botones {
+  #carrito-de-compras .div-carrito .div-canasta #botones {
     margin: 22px 0;
   }
-  #carrito-de-compras .div-carrito #botones #boton-compra button {
+  #carrito-de-compras .div-carrito .div-canasta #botones #boton-compra button {
     padding: 3px;
     font-size: 14px;
   }
-  #carrito-de-compras .div-carrito #botones #boton-ocultar button {
+  #carrito-de-compras .div-carrito .div-canasta #botones #boton-ocultar button {
     padding: 3px;
     font-size: 14px;
   }
@@ -209,37 +209,55 @@ h3 {
     margin: 30px;
   }
   #carrito-de-compras .div-carrito {
-    right: -60px;
+    right: 0px;
+    width: 15%;
   }
   #carrito-de-compras .div-carrito img {
-    width: 45%;
-  }
-  #carrito-de-compras .div-carrito #canasta .producto-canasta img {
-    width: 66%;
-  }
-  #carrito-de-compras .div-carrito #canasta .producto-canasta .descripcion-producto p {
-    font-size: 15px;
-  }
-  #carrito-de-compras .div-carrito #total-carrito {
-    font-size: 20px;
-  }
-  #carrito-de-compras .div-carrito #botones {
-    margin: 19px 0;
     width: 100%;
   }
-  #carrito-de-compras .div-carrito #botones #boton-compra {
+  #carrito-de-compras .div-carrito .div-canasta {
+    position: absolute;
+    left: -200px;
+    padding: 15px;
+    display: none;
+    box-shadow: 0 0 0 100vmax hsla(198, 11%, 35%, 0.9);
+    z-index: 2;
+    background-color: #30373f;
+  }
+  #carrito-de-compras .div-carrito .div-canasta #canasta .producto-canasta {
+    margin: 0 15px;
+  }
+  #carrito-de-compras .div-carrito .div-canasta #canasta .producto-canasta img {
+    width: 66%;
+  }
+  #carrito-de-compras .div-carrito .div-canasta #canasta .producto-canasta .descripcion-producto p {
+    font-size: 15px;
+    color: #DFEDFC;
+  }
+  #carrito-de-compras .div-carrito .div-canasta #total-carrito {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #DFEDFC;
+  }
+  #carrito-de-compras .div-carrito .div-canasta #botones {
+    margin: 25px 0px;
+    width: 100%;
+  }
+  #carrito-de-compras .div-carrito .div-canasta #botones #boton-compra {
+    margin: 0 5px;
     width: 50%;
   }
-  #carrito-de-compras .div-carrito #botones #boton-compra button {
-    padding: 0;
-    font-size: 13px;
+  #carrito-de-compras .div-carrito .div-canasta #botones #boton-compra button {
+    padding: 5px;
+    font-size: 15px;
   }
-  #carrito-de-compras .div-carrito #botones #boton-ocultar {
+  #carrito-de-compras .div-carrito .div-canasta #botones #boton-ocultar {
     width: 50%;
+    margin: 0 5px;
   }
-  #carrito-de-compras .div-carrito #botones #boton-ocultar button {
-    padding: 0;
-    font-size: 13px;
+  #carrito-de-compras .div-carrito .div-canasta #botones #boton-ocultar button {
+    padding: 5px;
+    font-size: 15px;
   }
   #listado-productos div .producto {
     width: 80%;
@@ -249,5 +267,84 @@ h3 {
   }
   #listado-productos div .producto div .contenido-producto p {
     font-size: 17px;
+  }
+}
+@media screen and (max-width: 480px) {
+  h3 {
+    margin: 20px 10px;
+  }
+  #header #logo {
+    width: 25%;
+  }
+  #header #encabezado {
+    width: 66%;
+    text-align: center;
+  }
+  #header #encabezado h1 {
+    font-size: 35px;
+  }
+  #productos__header h2 {
+    margin: 20px;
+    font-size: 35px;
+  }
+  #carrito-de-compras .div-carrito {
+    right: 0px;
+    width: 15%;
+  }
+  #carrito-de-compras .div-carrito img {
+    width: 100%;
+  }
+  #carrito-de-compras .div-carrito .div-canasta {
+    position: absolute;
+    left: -200px;
+    padding: 15px;
+    display: none;
+    box-shadow: 0 0 0 100vmax hsla(198, 11%, 35%, 0.9);
+    z-index: 2;
+    background-color: #30373f;
+  }
+  #carrito-de-compras .div-carrito .div-canasta #canasta .producto-canasta {
+    margin: 0 15px;
+  }
+  #carrito-de-compras .div-carrito .div-canasta #canasta .producto-canasta img {
+    width: 66%;
+  }
+  #carrito-de-compras .div-carrito .div-canasta #canasta .producto-canasta .descripcion-producto p {
+    font-size: 14px;
+    color: #DFEDFC;
+  }
+  #carrito-de-compras .div-carrito .div-canasta #total-carrito {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #DFEDFC;
+  }
+  #carrito-de-compras .div-carrito .div-canasta #botones {
+    margin: 25px 0px;
+    width: 100%;
+  }
+  #carrito-de-compras .div-carrito .div-canasta #botones #boton-compra {
+    margin: 0 5px;
+    width: 50%;
+  }
+  #carrito-de-compras .div-carrito .div-canasta #botones #boton-compra button {
+    padding: 7px;
+    font-size: 15px;
+  }
+  #carrito-de-compras .div-carrito .div-canasta #botones #boton-ocultar {
+    width: 50%;
+    margin: 0 5px;
+  }
+  #carrito-de-compras .div-carrito .div-canasta #botones #boton-ocultar button {
+    padding: 7px;
+    font-size: 15px;
+  }
+  #listado-productos div .producto {
+    width: 80%;
+  }
+  #listado-productos div .producto div .imagen-producto {
+    width: 40%;
+  }
+  #listado-productos div .producto div .contenido-producto p {
+    font-size: 15px;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -11,18 +11,23 @@ const listadoProductos = document.getElementById("listado-productos");
 const productosCuarto = document.querySelector(".productos-cuarto");
 const productosMedio = document.querySelector(".productos-medio");
 const productosBizcochuelos = document.querySelector(".productos-bizcochuelos");
+const divCanasta = document.querySelector(".div-canasta");
 //CLICK BOTONES
 carrito.onclick = () => {
   contenedorCanasta.style = 'display:block; overflow-y: scroll; max-height: 450px'
   botonOcultar.style = 'display:block'
   totalCarrito.style = 'display:block'
   botonCompra.style = 'display:block'
+  carrito.style = 'display:none'
+  divCanasta.style = 'display:block'
 }
 botonOcultar.onclick = () => {
   contenedorCanasta.style = 'display:none'
   botonOcultar.style = 'display:none'
   totalCarrito.style = 'display:none'
   botonCompra.style = 'display:none'
+  carrito.style = 'display:block'
+  divCanasta.style = 'display:none'
 }
 botonCompra.onclick = () => {
   Swal.fire({
@@ -155,7 +160,7 @@ insertarProductosMedio();
 insertarProductosTortas();
 //MEDIA QUERY
 if (window.matchMedia("(min-width: 481px) and (max-width: 768px)").matches) {
-  
+
 } else if (window.matchMedia("(max-width: 480px)").matches) {
 
 }
